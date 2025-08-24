@@ -20,11 +20,22 @@
       margin-bottom: 2rem;
     }
 
-    /* Apply Montserrat and enforce text color globally for widget */
+    /* Force font and color throughout widget */
     #mni-search-1755997694061,
     #mni-search-1755997694061 * {
       font-family: 'Montserrat', sans-serif !important;
       color: #000 !important;
+    }
+
+    /* Force button green color using ID selector + !important */
+    #mni-search-1755997694061 .mn-widget-searchbox-searchbtn {
+      background: #94c23c !important;
+      color: #ffffff !important;
+    }
+
+    #mni-search-1755997694061 .mn-widget-searchbox-searchbtn:hover {
+      background: #94c23c !important;
+      color: #ffffff !important;
     }
   </style>
 </head>
@@ -38,12 +49,51 @@
   <!-- GrowthZone Search Script -->
   <script type="text/javascript" src="https://business.clovischamber.com/Content/Script/SearchWidget.js"></script>
   <script type="text/javascript">
-    /*<![CDATA[*/
     new MNI.Widgets.SearchBox("mni-search-1755997694061", {
-      "buttonText": "Search",
-      "keywordPlaceholder": "Enter name, category, or keyword",
-      "styleTemplate": "#@id .mn-widget-searchbox-form{margin:0;display:flex}#@id .mn-widget-searchbox-fieldwrapper{margin:0 3px 0 0;flex:1 1 auto;width:auto;position:relative}#@id .mn-widget-searchbox-field{display:block;}#@id .mn-widget-searchbox-field input{background:#FFF;border:solid 1px #999;border-radius:0;color:#666666;font-family:\"montserrat\", Helvetica, Arial, \"Montserrat\", sans-serif;font-size:16px;line-height:100%}#@id .mn-widget-searchbox-field input{margin:0;width:100%;}#@id .mn-widget-searchbox-keyword{width:auto}#@id .mn-widget-searchbox-searchbtn{background:#94C23C;border:solid 1px #999;border-radius:0;color:#FFFFFF;cursor:pointer;font-family:\"montserrat\", Helvetica, Arial, \"Montserrat\", sans-serif;font-size:16px;margin:0;width:auto;padding:5px 10px}#@id .mn-widget-searchbox-searchbtn:hover{background:#94C23C;color:#FFFFFF}#@id .mn-widget-searchbox-autocomplete{left:0;min-width:100%;position:absolute;top:100%;white-space:nowrap;z-index:1000}#@id .mn-widget-searchbox-autocomplete ul{background:#FFF;border:solid 1px #999;border-radius:0;list-style:none;margin:0;padding:2px}#@id .mn-widget-searchbox-autocomplete li{margin:0;padding:0}#@id .mn-autocomplete{border-radius:0;color:#666666;cursor:pointer;display:block;font-family:\"montserrat\", Helvetica, Arial, \"Montserrat\", sans-serif;font-size:16px;line-height:100%;padding:.2em .4em;position:relative;text-decoration:none}#@id .mn-autocomplete:hover{background:#EEE;border:solid 1px #999;margin:-1px}#@id .mn-autocomplete br{display:none}#@id .mn-autocomplete-name{display:block}#@id .mn-autocomplete-type{color:#666666;display:block;font-size:75%;font-style:italic;line-height:125%}"
+      buttonText: "Search",
+      keywordPlaceholder: "Enter name, category, or keyword",
+      styleTemplate: `
+        #@id .mn-widget-searchbox-form {
+          margin: 0;
+          display: flex;
+        }
+        #@id .mn-widget-searchbox-fieldwrapper {
+          margin: 0 3px 0 0;
+          flex: 1 1 auto;
+          width: auto;
+          position: relative;
+        }
+        #@id .mn-widget-searchbox-field input {
+          background: #FFF;
+          border: solid 1px #999;
+          border-radius: 0;
+          color: #666666;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 16px;
+          line-height: 100%;
+          margin: 0;
+          width: 100%;
+        }
+        #@id .mn-widget-searchbox-searchbtn {
+          background: #94c23c !important;
+          border: solid 1px #999;
+          border-radius: 0;
+          color: #ffffff !important;
+          cursor: pointer;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 16px;
+          margin: 0;
+          width: auto;
+          padding: 5px 10px;
+        }
+        #@id .mn-widget-searchbox-searchbtn:hover {
+          background: #94c23c !important;
+          color: #ffffff !important;
+        }
+      `
     }).create();
-    /*]]>*/
   </script>
+
+</body>
+</html>
 
